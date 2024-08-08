@@ -1,6 +1,6 @@
 local showdiscord = readfile("showdiscordinvite.txt")
 if showdiscord == "nah" then
-end
+print("bye bye!!")
 else
 -- Services
 local TweenService = game:GetService("TweenService")
