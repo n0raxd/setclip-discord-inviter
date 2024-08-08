@@ -1,3 +1,5 @@
+writefile("showdiscordinvite.txt", "sick")
+wait(0.5)
 local showdiscord = readfile("showdiscordinvite.txt")
 if showdiscord == "nah" then
 print("bye bye!!")
