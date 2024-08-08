@@ -1,3 +1,7 @@
+local showdiscord = readfile("showdiscordinvite.txt")
+if showdiscord == "nah" then
+end
+else
 -- Services
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
@@ -167,6 +171,7 @@ module.Prompt = function(inviteTable)
                 TweenService:Create(accept, TweenInfo.new(0.15), { BackgroundColor3 = Color3.fromRGB(88, 101, 242) }):Play()
             end)
             connections.acceptActivated = accept.Activated:Connect(function()
+				writefile("showdiscordinvite.txt", "nah")
                 dismiss(true)
             end)
             do
@@ -178,6 +183,7 @@ module.Prompt = function(inviteTable)
                     ignore.Text = text
                 end)
                 connections.ignoreActivated = ignore.Activated:Connect(function()
+					writefile("showdiscordinvite.txt", "nah")
                     dismiss(false)
                 end)
             end
@@ -217,3 +223,4 @@ end
 
 -- Main
 return module
+end
